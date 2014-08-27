@@ -1,16 +1,14 @@
-# $![vagrants](http://www.vagrantup.com/images/logo_vagrant-81478652.png) up
+## $![vagrants](http://www.vagrantup.com/images/logo_vagrant-81478652.png)s
 ### My Personal Web Development Servers using Vagrant
-
---
 
 **Contains**
 
 - [Vaprobash](https://github.com/fideloper/Vaprobash) LAMP stack on ``Ubuntu 14.04.1 LTS``
-- [Precise64](https://vagrantcloud.com/hashicorp/precise64) w/custom bootstrap shell script
+- [Precise64](https://vagrantcloud.com/hashicorp/precise64) LAMP stack w/custom bootstrap shell script
 
 #### Setup
 
-1. Place your projects within your ``~/Sites`` directory
+1. Place all projects within your ``~/Sites`` directory
 2. ``$ cd ~/Vagrant/[vaprobash | precise64]``
 3. ``vagrant up``
 
