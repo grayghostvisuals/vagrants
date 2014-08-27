@@ -8,9 +8,12 @@
 
 #### Setup
 
-1. Place all projects within your ``~/Sites`` directory
-2. ``$ cd ~/Vagrant/[vaprobash | precise64]``
-3. ``vagrant up``
+1. Place your project root directories within your ``~/Sites`` directory
+2. ``$ mkdir ~/Vagrant``
+3. ``$ cd ~/Vagrant``
+4. ``$ git clone git@github.com:grayghostvisuals/vagrants.git``
+5. ``$ cd ~/Vagrant/[vaprobash | precise64]``
+6. ``$ vagrant up``
 
 #### &lt;Virtual Hosts&gt; Config
 
