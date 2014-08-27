@@ -4,6 +4,13 @@
 # References:
 # http://code.tutsplus.com/tutorials/setting-up-a-staging-environment--net-29738
 
+# User Setup
+#printenv MAC: HOME=/Users/[name]
+#echo ~
+#locally_shared_dir        = ENV['USER']
+#locally_shared_dir        = "/Users/" + ENV['USER']
+locally_shared_dir        = "~"
+
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -30,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.23.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -53,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
-  config.vm.synced_folder "/Users/grayghostvisuals/Sites", "/vagrant",
+  config.vm.synced_folder "#{locally_shared_dir}/Sites", "/vagrant",
             id: "core",
             :nfs => true,
             :mount_options => ['nolock,vers=3,udp,noatime']
