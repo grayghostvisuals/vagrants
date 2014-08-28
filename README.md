@@ -21,10 +21,19 @@
 
 ***coming soon***
 
+#### External Devices & IEVM Testing
+
+1. ``$ vagrant ssh``
+2. ``$ ifconfig``
+3. Look for the line ``eth2`` which displays an ``inet address.`` The ``eth2`` IP displayed is what you can use w/external devices and IEVMS for VirtualBox.
+
+NOTE: Vaprobash users can type ``[my_eth2_ip_address].xip.io/[project_root_name]`` which also works for IEVMS on your local machine running w/VirtualBox.
+
 #### Extras
 
 1. [Hosts](http://www.macupdate.com/app/mac/40003/hosts) : Add a preference pane to your system preferences which lets you toggle your host file entries on and off, as well as add and remove them.
 2. [Sequel Pro](http://www.sequelpro.com) : A fast, easy-to-use Mac database management application for working with MySQL databases.
+3. [Ghostlab](http://vanamco.com/ghostlab) : Synchronized browser testing for web and mobile
 
 #### Documentation
 
