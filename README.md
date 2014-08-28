@@ -5,6 +5,7 @@
 
 - [Vaprobash](https://github.com/fideloper/Vaprobash) LAMP stack on ``Ubuntu 14.04.1 LTS``
 - [Precise64](https://vagrantcloud.com/hashicorp/precise64) LAMP stack w/custom bootstrap shell script
+- [Nginx](https://vagrantcloud.com/smallhadroncollider/ubuntu-14.04-nginx-php55-mysql) - ``Ubuntu 14.04`` box with Nginx, PHP 5.5, and MySQL. Based around the Digital Ocean default Droplet.
 
 #### Setup
 
@@ -29,3 +30,4 @@
 
 - [Vagrant Docs](http://docs.vagrantup.com)
 - [Vaprobash Extended Docs](http://fideloper.github.io/Vaprobash/index.html)
+- [Digital Ocean](https://www.digitalocean.com/help/getting-started/setting-up-your-server)
