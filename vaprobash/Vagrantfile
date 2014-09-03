@@ -8,11 +8,12 @@ github_branch   = "1.1.0"
 github_url      = "https://raw.githubusercontent.com/#{github_username}/#{github_repo}/#{github_branch}"
 
 # User Setup
-#printenv MAC: HOME=/Users/[name]
-#echo ~
-#locally_shared_dir        = ENV['USER']
-#locally_shared_dir        = "/Users/" + ENV['USER']
-locally_shared_dir        = "~"
+# printenv MAC: HOME=/Users/[name]
+# echo ~
+# ENV['USER']
+# "/Users/" + ENV['USER']
+local_root_dir            = "~"
+project_root_dir          = "Sites"
 
 # Server Configuration
 hostname        = "vaprobash.dev"
@@ -53,12 +54,12 @@ ruby_gems             = [        # List any Ruby Gems that you want to install
 hhvm                  = "false"
 
 # PHP Options
-# composer_packages     = [        # List any global Composer packages that you want to install
+composer_packages     = [        # List any global Composer packages that you want to install
   #"phpunit/phpunit:4.0.*",
   #"codeception/codeception=*",
   #"phpspec/phpspec:2.0.*@dev",
   #"squizlabs/php_codesniffer:1.5.*",
-# ]
+]
 
 # Default web server document root
 # Symfony's public directory is assumed "web"
@@ -85,7 +86,6 @@ Vagrant.configure("2") do |config|
   config.vm.define "Vaprobash" do |vapro|
   end
 
-
   # Create a hostname, don't forget to put it to the `hosts` file
   # This will point to the server's default virtual host
   # TO DO: Make this work with virtualhost along-side xip.io URL
@@ -104,7 +104,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :public_network, :bridge => 'en1: Wi-Fi (AirPort)'
 
   # Use NFS for the shared folder
-  config.vm.synced_folder "#{locally_shared_dir}/Sites", "/vagrant",
+  config.vm.synced_folder "#{local_root_dir}/#{project_root_dir}", "/vagrant",
             id: "core",
             :nfs => true,
             :mount_options => ['nolock,vers=3,udp,noatime']
