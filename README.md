@@ -1,4 +1,3 @@
-## $![vagrants](http://www.vagrantup.com/images/logo_vagrant-81478652.png)s
 ### Web Development Servers using Vagrant
 
 **Contains**
